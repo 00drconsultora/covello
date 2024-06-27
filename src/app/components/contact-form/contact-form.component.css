@@ -1,0 +1,19 @@
+.bordered {
+    border: 2px solid lightgray; /* Border style */
+    padding: 2em;
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto; /* Center the paragraph */
+    background-color: white;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem; /* Adjust font size as needed */
+    margin-bottom: 20px;
+    color: black;
+}
+
+.logo-img{
+    width: 30%;
+    height: auto;
+}

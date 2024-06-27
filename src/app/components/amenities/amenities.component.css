@@ -1,0 +1,82 @@
+/* Styles for the background image */
+.background-image {
+  position: relative;
+  height: 80vh; /* Adjust as needed */
+  background-image: url('../../../assets/renders/Prototipo_Landing_page_Covello.png');
+  background-size: cover;
+  background-position: center;   
+  width: 100vw; /* Ensure it spans the full width of the viewport */
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* Styles for the content wrapper */
+.content-wrapper {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  color: #fff; /* Text color for contrast with background */
+}
+
+.title {
+  font-size: 3rem; /* Adjust font size as needed */
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Styles for the icon row */
+.icon-row {
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.icon-row img {
+  width: 80%; /* Make images responsive */
+  height: auto;
+  margin: 10px 0; /* Adjust margin as needed */
+  object-fit: contain; /* Ensure icons maintain aspect ratio */
+}
+
+/* Styles for the bordered paragraph */
+.bordered-paragraph {
+  border: 1.6px solid #fff; /* Border style */
+  padding: 10px;
+  max-width: 80%; /* Adjust as needed */
+  margin: 0 auto; /* Center the paragraph */
+}
+
+.bordered-paragraph p {
+  font-size: 1.7rem; /* Adjust font size as needed */
+  line-height: 1.6;
+}
+
+/* Adjust the min-height for smaller screens */
+@media (max-width: 991px) {
+  .background-image {
+    min-height: 130vh; /* Increase height for smaller screens */
+  }
+  .title {
+    font-size: 2rem; /* Adjust font size as needed */
+  }
+
+  .icon-row {
+    padding: 0 10px; /* Adjust padding for smaller screens */
+  }
+
+  .bordered-paragraph p {
+    font-size: 1rem; /* Adjust font size as needed */
+    padding: 5px;
+    max-width: 90%; /* Adjust as needed */
+  }
+}

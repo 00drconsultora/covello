@@ -1,0 +1,33 @@
+html {
+  scroll-behavior: smooth;
+}
+/* Custom styles for the navbar */
+.navbar-nav .nav-item {
+  margin-right: 1rem; /* Add spacing between links */
+}
+
+.nav-link {
+  color: black; /* Set link color to black */
+  text-decoration: none; /* Remove underline */
+}
+
+.nav-link:hover {
+  color: #ff0000; /* Change color on hover */
+}
+
+.nav-item.active .nav-link {
+  color: #ff0000; /* Change color when active */
+  position: relative;
+}
+
+.nav-item.active .nav-link::before {
+  content: '';
+  position: absolute;
+  left: -10px; /* Adjust the position of the black square */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: black;
+}
+  

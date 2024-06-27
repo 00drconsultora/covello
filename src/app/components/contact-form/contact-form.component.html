@@ -1,0 +1,46 @@
+<!-- <div id="landingForm">
+	<div class="titulo2">CONTACTO</div>
+  <div><label>Nombre:</label><input type="text" id="name"/></div>
+  <div><label>Teléfono:</label><input type="text" id="phone"/></div>
+  <div><label>Email:</label><input type="text" id="email"/></div>
+	<input type="button" onclick="send()" value="SEND"/>
+</div> -->
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="row">
+      <img src="../../../assets/Postal_Carmelo_R24.jpg" class="img-fluid" alt="">
+      <img src="../../../assets/logos/logo_covello2.png" class="logo-img" alt="">
+    </div>
+  </div>
+  <div class="col-md-6 bordered" id="landingForm">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <h1 class="title">CONTACTO</h1>
+      <div class="form-group mb-3">
+        <label for="name">Nombre</label>
+        <input type="text" class="form-control" id="name" name="name" formControlName="name">
+        <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+          Ingrese su nombre.
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <label for="phone">Teléfono</label>
+        <input type="tel" class="form-control" id="phone" name="phone"
+            formControlName="phone">
+        <div *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched">
+          <div *ngIf="contactForm.get('phone')?.errors?.['required']">Teléfono es requerido.</div>
+          <div *ngIf="contactForm.get('phone')?.errors?.['pattern']">Número de teléfono inválido.</div>
+        </div>
+      </div>
+      <div class="form-goup mb-3">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" formControlName="email">
+        <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+          <div *ngIf="contactForm.get('email')?.errors?.['required']">Email es requerido.</div>
+          <div *ngIf="contactForm.get('email')?.errors?.['email']">Email es inválido.</div>
+        </div>
+      </div>
+      <button type="submit" style="display: flex; justify-content: center;" class="btn btn-dark" [disabled]="!contactForm.valid">Guardar</button>
+    </form>
+  </div>
+</div>

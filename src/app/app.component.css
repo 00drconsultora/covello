@@ -1,0 +1,7 @@
+.container-sm{
+    display: flex; 
+    flex-direction: column; 
+    row-gap: 8em;
+    max-width: 60em;
+    margin: 0 auto;
+}
