@@ -5,7 +5,7 @@ const path = require('path');
 const baseHref = process.argv[2] || '/';
 
 // Define the path to the index.html file in the dist folder
-const indexPath = path.join(__dirname, 'dist/landing-page/index.html');
+const indexPath = path.join(__dirname, 'dist', 'landing-page', 'index.html');
 
 // Read the index.html file
 fs.readFile(indexPath, 'utf8', (err, data) => {

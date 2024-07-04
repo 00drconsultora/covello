@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "npm run postbuild:local && ng serve",
+    "build": "ng build --configuration production --base-href /covello/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:landing-page": "node dist/landing-page/server/server.mjs",
@@ -30,6 +30,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "express": "^4.18.2",
+    "node": "^22.4.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
