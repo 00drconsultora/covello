@@ -8,7 +8,12 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:landing-page": "node dist/landing-page/server/server.mjs"
+    "serve:ssr:landing-page": "node dist/landing-page/server/server.mjs",
+    "postbuild:local": "node set-base-href.js /",
+    "postbuild:ghpages": "node set-base-href.js /covello/",
+    "build:local": "npm run build && npm run postbuild:local",
+    "build:ghpages": "npm run build && npm run postbuild:ghpages",
+    "deploy": "npm run build:ghpages && npx angular-cli-ghpages --dir=dist/landing-page"
   },
   "private": true,
   "dependencies": {
