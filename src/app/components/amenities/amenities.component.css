@@ -37,12 +37,12 @@
 
 /* Styles for the icon row */
 .icon-row {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 0 20px;
 }
 
 .icon-row img {
-  width: 80%; /* Make images responsive */
+  width: 50%; /* Make images responsive */
   height: auto;
   margin: 10px 0; /* Adjust margin as needed */
   object-fit: contain; /* Ensure icons maintain aspect ratio */

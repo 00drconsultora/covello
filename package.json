@@ -12,7 +12,7 @@
     "postbuild:local": "node set-base-href.js /",
     "postbuild:ghpages": "node set-base-href.js /covello/",
     "build:local": "ng build --configuration production && npm run postbuild:local",
-    "build:ghpages": "ng build --configuration production --base-href /covello/ && npm run postbuild:ghpages",
+    "build:ghpages": "ng build --configuration production --base-href=/covello/ && npm run postbuild:ghpages",
     "deploy": "npm run build:ghpages && npx angular-cli-ghpages --dir=dist/landing-page"
   },
   "private": true,
