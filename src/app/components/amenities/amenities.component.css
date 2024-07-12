@@ -2,7 +2,7 @@
 .background-image {
   position: relative;
   height: 80vh; /* Adjust as needed */
-  background-image: url('../../../assets/renders/Prototipo_Landing_page_Covello.png');
+  /* background-image: url('../.././assets/renders/Prototipo_Landing_page_Covello.png'); */
   background-size: cover;
   background-position: center;   
   width: 100vw; /* Ensure it spans the full width of the viewport */

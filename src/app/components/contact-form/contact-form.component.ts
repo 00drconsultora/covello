@@ -35,7 +35,7 @@ export class ContactFormComponent {
         cellphone: this.contactForm.get('phone')?.value,
              }
 
-      this.http.post('/assets/sendContact.php', data)
+      this.http.post('assets/sendContact.php', data)
       .subscribe({
         next: () => {
           this.successMessage = 'Success';
